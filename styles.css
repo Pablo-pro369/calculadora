@@ -1,0 +1,113 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column; /* Organiza os elementos em coluna */
+    justify-content: center; /* Centraliza verticalmente */
+    align-items: center; /* Centraliza horizontalmente */
+    height: 100vh;
+    margin: 0;
+    background: #f0f0f0; /* Fundo padrão claro */
+    transition: background 0.3s ease; /* Transição suave para troca de tema */
+}
+
+/* Tema escuro */
+body.dark-mode {
+    background: #121212; /* Fundo preto */
+    color: #ffffff; /* Texto branco */
+}
+
+/* Calculadora */
+.calculator {
+    width: 300px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transição suave */
+    background: #ffffff; /* Fundo padrão claro */
+    color: #000000; /* Texto preto */
+}
+
+/* Tema escuro para a calculadora */
+body.dark-mode .calculator {
+    background: #000000; /* Fundo preto */
+    color: #ffffff; /* Texto branco */
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2); /* Sombra leve */
+}
+
+/* Display */
+.display {
+    background: inherit; /* Usa o mesmo fundo da calculadora */
+    color: inherit; /* Usa a mesma cor de texto */
+    font-size: 2rem;
+    text-align: right;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    min-height: 50px;
+}
+
+/* Botões */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.btn {
+    padding: 15px;
+    font-size: 1.2rem;
+    background: #f0f0f0; /* Fundo padrão do botão */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease, color 0.3s ease; /* Suaviza a troca de tema */
+}
+
+body.dark-mode .btn {
+    background: #333333; /* Fundo dos botões no modo escuro */
+    color: #ffffff; /* Texto branco */
+}
+
+.btn:hover {
+    background: #ddd; /* Efeito ao passar o mouse */
+}
+
+body.dark-mode .btn:hover {
+    background: #444444; /* Fundo ao passar o mouse no modo escuro */
+}
+
+.equal {
+    background: #4caf50;
+    color: white;
+    grid-column: span 4;
+}
+
+body.dark-mode .equal {
+    background: #45a049;
+}
+
+/* Botão para alternar tema */
+.theme-button {
+    margin-bottom: 20px; /* Espaçamento entre o botão e a calculadora */
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    background: #4caf50;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.theme-button:hover {
+    background: #45a049;
+}
+
+/* Rodapé */
+footer {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 1rem;
+    color: #4caf50;
+    font-weight: bold;
+}
